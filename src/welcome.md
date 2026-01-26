@@ -20,7 +20,7 @@ All this and I haven’t mentioned my grown-up children and my dog. They would b
 
 I thrive on appreciation, please, follow my socials and star my repos. TODO link to socials:
 
-<img src="./media/octocat.svg" class="right" />[github.com/dirtslayer](github.com/dirtslayer)
+<img src="./media/octocat.svg" class="right" />[github.com/dirtslayer](http://github.com/dirtslayer)
 
 zulip
 email
