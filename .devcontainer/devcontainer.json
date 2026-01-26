@@ -1,0 +1,23 @@
+{
+  "name": "Alpine + mise + helix + jj",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "remoteUser": "dd",
+
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "tamasfe.even-better-toml",
+        "jasew.vscode-helix-emulation" 
+      ]
+    }
+  },
+
+  "postCreateCommand": "bash .devcontainer/post-create.sh"
+}
