@@ -36,6 +36,6 @@ All this and I haven’t mentioned my grown-up children and my dog. They would b
 
 I thrive on appreciation, please, follow my socials and star my repos. TODO link to socials:
 
-- [github.com/dirtslayer](https://github.com/dirtslayer)
-- [trustnoone.zulipchat](https://trustnoone.zulipchat.com/join/ljbip6q5e6ue3udfdi4mcrvd/)
-- email
+- [github.com/dirtslayer - A place for my projects](https://github.com/dirtslayer)
+- [trustnoone.zulipchat - A place to chat with me](https://trustnoone.zulipchat.com/join/ljbip6q5e6ue3udfdi4mcrvd/)
+- [renedupas@proton.me - My email](mailto:renedupas@proton.me)
