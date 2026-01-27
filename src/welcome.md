@@ -1,6 +1,6 @@
 #  Welcome 
 
-<img class="right" src="media/face-jan-2026.jpg" alt="dd">
+<img class="right" src="media/face-jan-2026.jpg" alt="dd" style="width:150px">
 
 Greetings, Peace to you and your loved ones.
 
@@ -15,6 +15,8 @@ I’ve worked as a Technical Trainer, Technician, Desktop Support Specialist, We
 ## Playing Games
 
 The video games I love most are Shisen-Sho and War Brokers. You might have found me through my War Brokers clan name, [FISH] Milan Kundera. I've also created small games and data-mining Discord bots. I also spend a lot of time doodling in Krita.
+
+<img src="./media/00.png" style="width:100px"  class="left" alt="doh" >
 
 ## Computer Comforts
 
