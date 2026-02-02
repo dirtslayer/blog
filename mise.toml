@@ -1,5 +1,10 @@
-
-
+[tasks.gitconfig]
+description = "configure git"
+run = [
+'git config --global --add safe.directory /workspaces/blog',
+'git config user.name "Darrell D"',
+'git config user.email "renedupas@proton.me"'
+]
 
 # setting up container tasks, this is done before container is made, left for ref
 [tasks.install-podman]
