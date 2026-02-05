@@ -2,6 +2,9 @@
 
 Author: Darrell D, Feb 2026
 
+<img src="./media/alienplanet.png" style="width:600px" alt="threee" >
+<div class="clear"></div>
+
 ## Why
 
 As a learner I am building new projects often; it is helpful if they are self 
@@ -21,17 +24,23 @@ provide you with feedback on each step. It can also act as a general purpose ver
 manager, though, it is only used as a runner here.
 
 > if a line from a run block returns non 0, the run block stops, that is 
-> why false on a line by itself disables a task
-> also why, if you dont care if a command succeeds you can || true
-
-## What it looks like - overview
-
-> devcontainers are better than no containers, 
-> but vscode obfuscates folder paths for your mount point and 
-> a container image is created for every project, also with unrelated name
+> why false on a line by itself disables a task.
+> Also, if you dont care if a command succeeds you can append || true
 
 
-So what I've done here is simple, each project starts in a folder with 
+> You may end up recreating containers over top of existing mount, so
+> mkdir will fail, but we dont want the script to abort
+
+## What it looks like
+
+> devcontainers, the vscode / github codespaces containerized form are better than no containers, 
+> 
+> but vscode obfuscates folder paths for your mount point (deep in ~.local) and 
+> a container image is created for every project, which polutes your image directory, it
+> also uses unrelated name, that is super annoying because you are correlating the 
+> stupid names with my stupid brain is incredible irritation
+
+So what I've done here is each project starts in a folder with 
 the mise.toml file, which provides tasks for creating and using a container.
 The container will have a name the same as the project. There is a user 
 inside the container with the same name as your current user on the host.
@@ -45,7 +54,7 @@ but you should build, run, deploy etc from the container to get a clean room.
 
 0. Install Mise and Podman, refer to podman.mise.toml
 
-1. create a folder for your project <hello>
+1. create a folder for your project hello
 ```
 mkdir hello
 cd hello
@@ -66,9 +75,7 @@ wget https://raw.githubusercontent.com/dirtslayer/project/refs/heads/main/mise.t
 
     > the container will have the same name as your project
 
-6. disable steps 90,91,99 in the mise.toml by placing false as the first line of run
-   segment for safety, you wont nuke your data, but the container could get rebuilt
-   unnecessarily
+6. disable steps 90,91,99 in the mise.toml 
 
 7. mise run, 01 to work on your project
 
@@ -84,3 +91,7 @@ Link: [project repo](https://github.com/dirtslayer/project)
 
 This scaffold is for Debian host and arch container.
 One could create other similar variations, like arch as a host with an alpine container.
+
+## My First PeerTube
+
+<div style="position: relative; padding-top: 56.25%;"><iframe title="Using Podman and Mise to containerize projects" width="100%" height="100%" src="https://video.mycrowd.ca/videos/embed/eYMKFAYkAEjRBxDX8FrhR2" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="border: 0px; position: absolute; inset: 0px;"></iframe></div>
