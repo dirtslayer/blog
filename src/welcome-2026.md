@@ -82,11 +82,11 @@ media, so, aside from the unavoidable github and youtube, I only have
 email, zulip and I just started a peertube, but unsure what to put there
  yet. Oh, I also have a twitch, and am thinking about using that.
 
-- [github.com/dirtslayer - A place for my projects](https://github.com/dirtslayer)
-- [trustnoone.zulipchat - A place to chat with me](https://trustnoone.zulipchat.com/join/ljbip6q5e6ue3udfdi4mcrvd/)
-- [youtube.com/dirtslayer - You know what tube]
-- [peer tube/] 
-- [renedupas@proton.me - My email](mailto:renedupas@proton.me)
+- [github.com/dirtslayer - Projects](https://github.com/dirtslayer)
+- [trustnoone.zulipchat.com - Chat](https://trustnoone.zulipchat.com/join/ljbip6q5e6ue3udfdi4mcrvd/)
+- [youtube.com/dirtslayer123 - You know what tube](https://www.youtube.com/dirtslayer123)
+- [video.mycrowd.ca/c/less_is_more - Peer tube ](https://video.mycrowd.ca/c/less_is_more/)
+- [renedupas@proton.me - Email](mailto:renedupas@proton.me)
 
 <div class="clear"></div>
 
