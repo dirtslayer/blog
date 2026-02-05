@@ -37,10 +37,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-2a7a60eb.js";
+            window.path_to_searchindex_js = "searchindex-0436beac.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-1dcb5ee8.js"></script>
+        <script src="toc-3f196e9f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -270,7 +270,7 @@ yet. Oh, I also have a twitch, and am thinking about using that.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="container-project-management"><a class="header" href="#container-project-management">Container Project Management</a></h1>
 <p>Author: Darrell D, Feb 2026</p>
-<img src="media/alienplanet.png" style="width:600px" alt="threee">
+<img src="media/alienplanet.png" style="width:600px" alt="abstract alien planet">
 <div class="clear"></div>
 
 <h2 id="why"><a class="header" href="#why">Why</a></h2>
@@ -289,17 +289,17 @@ manager, though, it is only used as a runner here.</p>
 <blockquote>
 <p>if a line from a run block returns non 0, the run block stops, that is
 why false on a line by itself disables a task.
-Also, if you dont care if a command succeeds you can append || true</p>
+Also, if you don’t care if a command succeeds you can append || true</p>
 </blockquote>
 <blockquote>
 <p>You may end up recreating containers over top of existing mount, so
-mkdir will fail, but we dont want the script to abort</p>
+mkdir will fail, but we don’t want the script to abort</p>
 </blockquote>
 <h2 id="what-it-looks-like"><a class="header" href="#what-it-looks-like">What it looks like</a></h2>
 <blockquote>
 <p>devcontainers, the vscode / github codespaces containerized form are better than no containers,</p>
 <p>but vscode obfuscates folder paths for your mount point (deep in ~.local) and
-a container image is created for every project, which polutes your image directory, it
+a container image is created for every project, which pollutes your image directory, it
 also uses unrelated name, that is super annoying because you are correlating the
 stupid names with my stupid brain is incredible irritation</p>
 </blockquote>

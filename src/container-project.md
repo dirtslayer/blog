@@ -2,7 +2,7 @@
 
 Author: Darrell D, Feb 2026
 
-<img src="./media/alienplanet.png" style="width:600px" alt="threee" >
+<img src="./media/alienplanet.png" style="width:600px" alt="abstract alien planet" >
 <div class="clear"></div>
 
 ## Why
@@ -25,18 +25,18 @@ manager, though, it is only used as a runner here.
 
 > if a line from a run block returns non 0, the run block stops, that is 
 > why false on a line by itself disables a task.
-> Also, if you dont care if a command succeeds you can append || true
+> Also, if you don't care if a command succeeds you can append || true
 
 
 > You may end up recreating containers over top of existing mount, so
-> mkdir will fail, but we dont want the script to abort
+> mkdir will fail, but we don't want the script to abort
 
 ## What it looks like
 
 > devcontainers, the vscode / github codespaces containerized form are better than no containers, 
 > 
 > but vscode obfuscates folder paths for your mount point (deep in ~.local) and 
-> a container image is created for every project, which polutes your image directory, it
+> a container image is created for every project, which pollutes your image directory, it
 > also uses unrelated name, that is super annoying because you are correlating the 
 > stupid names with my stupid brain is incredible irritation
 
