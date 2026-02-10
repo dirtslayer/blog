@@ -1,0 +1,23 @@
+[tasks.serve]
+description = "devel only"
+run = """
+  mdbook serve
+"""
+
+[tasks.build]
+description = "pre commit and push"
+run = """
+  mdbook build
+"""
+
+[tasks.push-github]
+description = "push to github"
+run = """
+  git push origin
+"""
+
+[tasks.push-laptop]
+description = "push to laptop"
+run = """
+  git push laptop
+"""
