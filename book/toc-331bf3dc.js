@@ -8,7 +8,7 @@ class MDBookSidebarScrollbox extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="welcome-2026.html"><strong aria-hidden="true">1.</strong>  Welcome 2026</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="container-project.html"><strong aria-hidden="true">2.</strong>  Container Project Management </a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="pattern.html"><strong aria-hidden="true">3.</strong>  Pattern </a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="markdown-cheat-sheet.html"><strong aria-hidden="true">4.</strong> Markdown Cheat Sheet</a></span></li></ol>';
+        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="welcome-2026.html"><strong aria-hidden="true">1.</strong>  Welcome 2026</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="container-project.html"><strong aria-hidden="true">2.</strong>  Container Project Management </a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="pattern.html"><strong aria-hidden="true">3.</strong>  Pattern </a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="krita-notes.html"><strong aria-hidden="true">4.</strong>  Krita Notes </a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="markdown-cheat-sheet.html"><strong aria-hidden="true">5.</strong> Markdown Cheat Sheet</a></span></li></ol>';
         // Set the current, active page, and reveal it if it's hidden
         let current_page = document.location.href.toString().split('#')[0].split('?')[0];
         if (current_page.endsWith('/')) {
@@ -40,14 +40,22 @@ class MDBookSidebarScrollbox extends HTMLElement {
         // Track and set sidebar scroll position
         this.addEventListener('click', e => {
             if (e.target.tagName === 'A') {
-                sessionStorage.setItem('sidebar-scroll', this.scrollTop);
+                const clientRect = e.target.getBoundingClientRect();
+                const sidebarRect = this.getBoundingClientRect();
+                sessionStorage.setItem('sidebar-scroll-offset', clientRect.top - sidebarRect.top);
             }
         }, { passive: true });
-        const sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-        sessionStorage.removeItem('sidebar-scroll');
-        if (sidebarScrollTop) {
+        const sidebarScrollOffset = sessionStorage.getItem('sidebar-scroll-offset');
+        sessionStorage.removeItem('sidebar-scroll-offset');
+        if (sidebarScrollOffset !== null) {
             // preserve sidebar scroll position when navigating via links within sidebar
-            this.scrollTop = sidebarScrollTop;
+            const activeSection = this.querySelector('.active');
+            if (activeSection) {
+                const clientRect = activeSection.getBoundingClientRect();
+                const sidebarRect = this.getBoundingClientRect();
+                const currentOffset = clientRect.top - sidebarRect.top;
+                this.scrollTop += currentOffset - parseFloat(sidebarScrollOffset);
+            }
         } else {
             // scroll sidebar to current active section when navigating via
             // 'next/previous chapter' buttons
