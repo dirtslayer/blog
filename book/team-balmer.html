@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title> Container Project Management  - Darrell&#x27;s Blog</title>
+        <title> Team Balmer, A Poem  - Darrell&#x27;s Blog</title>
 
 
         <!-- Custom HTML head -->
@@ -175,117 +175,24 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="container-project-management"><a class="header" href="#container-project-management">Container Project Management</a></h1>
-<p>Author: Darrell D, Feb 2026</p>
-<img src="./media/alienplanet.png" style="width:600px" alt="abstract alien planet">
-<div class="clear"></div>
-
-<h2 id="why"><a class="header" href="#why">Why</a></h2>
-<p>As a learner I am building new projects often; it is helpful if they are self
-documented and reproducible.</p>
-<h2 id="what-podman-gives-you"><a class="header" href="#what-podman-gives-you">What podman gives you</a></h2>
-<p>A container that is independent of the host system, which allows you to build,
-run and deploy consistently.</p>
-<h2 id="what-mise-gives-you"><a class="header" href="#what-mise-gives-you">What mise gives you</a></h2>
-<blockquote>
-<p>toml with bash run blocks avoids mixed language code for the most part</p>
-</blockquote>
-<p>Mise is way to group and label a series of tasks, make a clear menu of those tasks, and
-provide you with feedback on each step. It can also act as a general purpose version
-manager, though, it is only used as a runner here.</p>
-<blockquote>
-<p>if a line from a run block returns non 0, the run block stops, that is
-why false on a line by itself disables a task.
-Also, if you don’t care if a command succeeds you can append || true</p>
-</blockquote>
-<blockquote>
-<p>You may end up recreating containers over top of existing mount, so
-mkdir will fail, but we don’t want the script to abort</p>
-</blockquote>
-<h2 id="what-it-looks-like"><a class="header" href="#what-it-looks-like">What it looks like</a></h2>
-<blockquote>
-<p>devcontainers, the vscode / github codespaces containerized form are better than no containers,</p>
-<p>but vscode obfuscates folder paths for your mount point (deep in ~.local) and
-a container image is created for every project, which pollutes your image directory, it
-also uses unrelated name, that is super annoying because you are correlating the
-stupid names with my stupid brain is incredible irritation</p>
-</blockquote>
-<p>So what I’ve done here is each project starts in a folder with
-the mise.toml file, which provides tasks for creating and using a container.
-The container will have a name the same as the project. There is a user
-inside the container with the same name as your current user on the host.
-The project files will be mounted in a folder called mount, and when you
-enter the container that folder becomes your home folder inside the container.</p>
-<p>You can work on your project files from outside the container in the mount folder,
-but you should build, run, deploy etc from the container to get a clean room.</p>
-<h2 id="steps"><a class="header" href="#steps">Steps</a></h2>
-<ol start="0">
-<li>
-<p>Install Mise and Podman, refer to podman.mise.toml</p>
-</li>
-<li>
-<p>create a folder for your project hello</p>
-</li>
-</ol>
-<pre><code>mkdir hello
-cd hello
-</code></pre>
-<ol start="2">
-<li>Place mise.toml Container Manager script inside the project folder</li>
-</ol>
-<pre><code>wget https://raw.githubusercontent.com/dirtslayer/project/refs/heads/main/mise.toml
-</code></pre>
-<ol start="3">
-<li>
-<p>Review mise.toml</p>
-<ul>
-<li>remove false’s at start of run section to enable task</li>
-<li>add your tooling to the PACKAGES variable in the setup-container task</li>
-</ul>
-</li>
-<li>
-<p>mise run, to show task menu</p>
-</li>
-<li>
-<p>steps in order of: 90, 99 from the mise.toml will create and setup your container</p>
-<blockquote>
-<p>the container will have the same name as your project</p>
-</blockquote>
-</li>
-<li>
-<p>disable steps 90,91,99 in the mise.toml</p>
-</li>
-<li>
-<p>mise run, 01 to work on your project</p>
-</li>
-<li>
-<p>mise run, 02 to update / install software inside container</p>
-</li>
-<li>
-<p>enjoy not having to use devcontainers!</p>
-</li>
-<li>
-<p>Star The Repo</p>
-</li>
-</ol>
-<p>Link: <a href="https://github.com/dirtslayer/project">project repo</a></p>
-<ol start="11">
-<li>Create an Issue, Create a PR</li>
-</ol>
-<p>This scaffold is for Debian host and arch container.
-One could create other similar variations, like arch as a host with an alpine container.</p>
-<h2 id="my-first-peertube"><a class="header" href="#my-first-peertube">My First PeerTube</a></h2>
-<div style="position: relative; padding-top: 56.25%;"><iframe title="Using Podman and Mise to containerize projects" width="100%" height="100%" src="https://video.mycrowd.ca/videos/embed/eYMKFAYkAEjRBxDX8FrhR2" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" style="border: 0px; position: absolute; inset: 0px;"></iframe></div>
+                        <h1 id="team-balmer-a-poem"><a class="header" href="#team-balmer-a-poem">Team Balmer, A Poem</a></h1>
+<p>We talk about vocabulary all the time.</p>
+<p>Thorough due diligence,</p>
+<p>totally fair,</p>
+<p>negotiating literal lines,</p>
+<p>issues arise.</p>
+<p><img src="./media/team-balmer.png" alt="Team Balmer, A Poem"></p>
+<p>2026-02-11</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="welcome-2026.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="krita-notes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="pattern.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="markdown-cheat-sheet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -295,11 +202,11 @@ One could create other similar variations, like arch as a host with an alpine co
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="welcome-2026.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="krita-notes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="pattern.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="markdown-cheat-sheet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
