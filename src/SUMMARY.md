@@ -7,4 +7,5 @@ _last modified 2026-02-11
 - [Team Balmer, A Poem ](./team-balmer.md)
 - [Pure Frustration](./purefrustration.md)
 - [Self Esteem Workshop](./self-esteem.md)
+- [Milan Kundera Obituary](./kundera.md)
 - [Markdown Cheat Sheet](./markdown-cheat-sheet.md)
