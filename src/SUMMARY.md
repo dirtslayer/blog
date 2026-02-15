@@ -6,4 +6,5 @@ _last modified 2026-02-11
 - [Krita Notes ](./krita-notes.md)
 - [Team Balmer, A Poem ](./team-balmer.md)
 - [Pure Frustration](./purefrustration.md)
+- [Self Esteem Workshop](./self-esteem.md)
 - [Markdown Cheat Sheet](./markdown-cheat-sheet.md)

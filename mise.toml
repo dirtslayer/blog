@@ -21,3 +21,12 @@ description = "push to laptop"
 run = """
   git push laptop
 """
+
+[tasks.openurl]
+description = "https://dirtslayer.github.io/blog/"
+shell = "bash -c"
+run = """
+  xdg-open https://dirtslayer.github.io/blog/ & disown
+"""
+
+
