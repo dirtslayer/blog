@@ -8,4 +8,5 @@ _last modified 2026-02-11
 - [Pure Frustration](./purefrustration.md)
 - [Self Esteem Workshop](./self-esteem.md)
 - [Milan Kundera Obituary](./kundera.md)
+- [stay out of home](./home.md)
 - [Markdown Cheat Sheet](./markdown-cheat-sheet.md)
