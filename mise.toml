@@ -5,21 +5,9 @@ run = """
 """
 
 [tasks.build]
-description = "pre commit and push"
+description = "pre commit build"
 run = """
   mdbook build
-"""
-
-[tasks.push-github]
-description = "push to github"
-run = """
-  git push origin
-"""
-
-[tasks.push-laptop]
-description = "push to laptop"
-run = """
-  git push laptop
 """
 
 [tasks.openurl]
